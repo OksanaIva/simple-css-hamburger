@@ -1,0 +1,47 @@
+.hamburger {
+    width: 9em;
+    height: 7em;
+    margin: 2.6em 0;
+    position: relative;
+    cursor: pointer;
+    transition: .3s transform ease-out;
+}
+
+.hamburger > div,
+.hamburger::after,
+.hamburger::before {
+    content: "";
+    width: inherit;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #d4d4d4;
+    transition: all .3s ease-out;
+}
+
+.hamburger > div {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(0deg);
+}
+
+.hamburger::after {
+    bottom: 0;
+}
+
+.hamburger::before {
+    top: 0;
+}
+
+.hamburger:hover {
+    transform: rotate(90deg);
+}
+
+.hamburger:hover > div,
+.hamburger:hover::after,
+.hamburger:hover::before {
+    transform: rotate(180deg);
+    background: #eadf26;
+}
